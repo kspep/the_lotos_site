@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Товары</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="left-panel">
+        <div class="profile-image">
+            <img src="f3.png" alt="Profile Image">
+        </div>
+        <div class="buttons">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="products.html">Товары</a></li>
+                    <li><a href="list_input.html">E-OANC</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="info">
+            <p>Только для ПК, если у вас телефон, то в настройках браузера включите ПК версию!</p>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <h1>Категории товаров</h1>
+
+        <!-- Категория 1 -->
+        <div class="category-block">
+            <h2>Лицензии (создание разных лицензий и правил для вашего товара под запрос)</h2>
+            <button class="button-style" onclick="showCategory('licenses')">Открыть</button>
+        </div>
+
+        <!-- Категория 2 -->
+        <div class="category-block">
+            <h2>Сайты на заказ (создание сайта по запросу)</h2>
+            <button class="button-style" onclick="showCategory('websites')">Открыть</button>
+        </div>
+
+        <!-- Скрытые товары для категории 1 -->
+        <div id="licenses" class="product-category" style="display: none;">
+            <h2>Товары по запросу: Лицензии</h2>
+            <div class="product">
+                <div class="product-image">
+                    <img src="1p.png" alt="Лицензия под ключ" width="512" height="256">
+                </div>
+                <h2>Лицензия под ключ</h2>
+                <p style="color: red;">Нельзя купить, закрыто</p>
+                <p>Стоимость: 250р, Контакты для оплаты ДС N/A; ТГ N/A</p>
+                <p style="border: 2px solid black; border-radius: 10px; padding: 10px; display: inline-block; background-color: transparent;">
+                    Лицензия под ваш запрос, делаю с использованием ChatGPT для досоздания и перевода.
+                </p>
+            </div>
+        </div>
+
+        <!-- Скрытые товары для категории 2 -->
+        <div id="websites" class="product-category" style="display: none;">
+            <h1>Товары по запросу: Сайт на заказ</h1>
+            <div class="product">
+                <div class="product-image">
+                    <img src="2p.png" alt="Сайт под заказ" width="512" height="256">
+                </div>
+                <h2>Сайт под заказ</h2>
+                <p style="color: red;">Пока не делаю!</p>
+                <p>Стоимость: 450р, Контакты для оплаты ДС N/A; ТГ N/A</p>
+                <p style="border: 2px solid black; border-radius: 10px; padding: 10px; display: inline-block; background-color: transparent;">
+                    Сайт под ключ.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>*Все права защищены OP: Kspep(ko) https://github.com/kspep/Open-Access-NonCommercial-License/blob/main/E-OANC%20license</p>
+    </div>
+
+    <script>
+        function showCategory(categoryId) {
+            // Скрываем все категории товаров
+            document.querySelectorAll('.product-category').forEach(category => {
+                category.style.display = 'none';
+            });
+
+            // Показываем выбранную категорию
+            document.getElementById(categoryId).style.display = 'block';
+        }
+    </script>
+</body>
+</html>
